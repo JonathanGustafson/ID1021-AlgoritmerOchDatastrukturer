@@ -1,0 +1,72 @@
+//Assignment3.java
+
+/* 
+ * THIS PROGRAM DEPENDS ON:
+ * -BST.java
+ * -Queue.java
+ * -StdOut.java (assertions)
+ * -StdIn.java (assertions)
+ * 
+ * ----------------------------------
+ * @author Jonathan Gustafson
+ * 
+ * Parts of the code is taken from: https://algs4.cs.princeton.edu/code/
+ * 
+ * This program reads a given amount of words from a text file,
+ * then is saves all words in a search tree, counts the words.
+ * Then the program prints the most common word and its wordcount.
+ * the amount of distinct words, how many words that was read
+ * and the time it took.
+ * 
+ * */
+
+import java.util.*;
+import java.io.*;
+import edu.*;
+
+public class Assignment3 {
+    
+    public static void main(String[] args) throws FileNotFoundException {
+    	
+        int distinct = 0, words = 0;
+        BST<String, Integer> bst = new BST<String, Integer>();
+        
+        //tools to read from file
+        FileReader fr = new FileReader("C:\\Users\\jonth\\Desktop\\Workspace\\AlgoData_Lab3\\labText.txt");  
+        Scanner sc = new Scanner(fr);
+        
+        //Check start time
+        long startTime = System.nanoTime();
+        
+        // compute frequency counts
+        while (words < 1000) {
+            String key = sc.next();
+            words++;
+            if (bst.contains(key)) {
+                bst.put(key, bst.get(key) + 1);
+            }
+            else {
+                bst.put(key, 1);
+                distinct++;
+            }
+        }
+        
+        //Check stop time and calculate elapsed time
+        long stopTime = System.nanoTime();
+        long elapsedTime = (stopTime - startTime) / 1000000; //time in milliseconds
+        
+        // find a key with the highest frequency count
+        String max = "";
+        bst.put(max, 0);
+        for (String word : bst.keys()) {
+            if (bst.get(word) > bst.get(max))
+                max = word;
+        }
+        
+        //print results
+        StdOut.println("Time taken: " + elapsedTime + "ms");
+        StdOut.println("Most common word: " + max + " " + bst.get(max));
+        StdOut.println("distinct = " + distinct);
+        StdOut.println("words = " + words);
+    }
+}

@@ -1,0 +1,60 @@
+Sort times for random numbers between 1 and 1000
+
+NOTE: 
+The sorting algorithms are executed 5 times, each time with a new
+randomized array. And the avarage execution time is calculated.
+ 
+______________________________________________________
+
+100 elements
+-------------
+InsertionSort:  0ms | 0ms | 0ms | 0ms | 0ms - Avg: 0ms
+MergeSort: 	0ms | 0ms | 0ms | 0ms | 0ms - Avg: 0ms
+QuickSort:	0ms | 0ms | 0ms | 0ms | 0ms - Avg: 0ms
+
+1000 elements
+-------------
+InsertionSort:  11ms | 5ms | 5ms | 12ms | 8ms - Avg: 8.2ms
+MergeSort: 	 1ms | 1ms | 1ms |  1ms | 1ms - Avg:   1ms
+QuickSort:	 0ms | 0ms | 0ms |  1ms | 0ms - Avg: 0.2ms
+
+10 000 elements
+-------------
+InsertionSort:  53ms | 74ms | 68ms | 60ms | 77ms - Avg: 66.4ms
+MergeSort: 	 7ms |  9ms |  8ms |  7ms |  7ms - Avg:  7.6ms
+QuickSort: 	 4ms |  3ms |  3ms |  3ms |  2ms - Avg:    3ms
+
+
+30 000 elements
+-------------
+InsertionSort:  492ms | 583ms | 485ms | 508ms | 599ms - Avg:   533ms
+MergeSort: 	 17ms |  17ms |  17ms |  17ms |  17ms - Avg:    17ms
+QuickSort:	  3ms |   3ms |   6ms |   5ms |   4ms - Avg:   4.2ms
+
+90 000 elements
+-------------
+InsertionSort:  3680ms | 3557ms | 3673ms | 4042ms | 3573ms - Avg: 3705ms
+MergeSort: 	  90ms |   93ms |   94ms |   96ms |  114ms - Avg: 97.4ms
+QuickSort:	  13ms |   15ms |   12ms |   20ms |   40ms - Avg:   20ms
+
+200 000 elements
+-------------
+InsertionSort:  18060ms | 18113ms | 18097ms | 17937ms | 18187ms - Avg: 18079ms
+MergeSort: 	  135ms |   186ms |   180ms |   254ms |    92ms - Avg:   169ms
+QuickSort:	   61ms |    57ms |    47ms |    53ms |    59ms - Avg:    55ms
+
+400 000 elements
+-------------
+InsertionSort:    _ms |   _ms |   _ms |   _ms |   _ms - Avg:    0ms
+MergeSort: 	266ms | 300ms | 253ms | 192ms | 189ms - Avg:  240ms
+QuickSort:	 60ms |  68ms |  59ms |  97ms |  83ms - Avg: 73.4ms
+
+1 000 000 elements
+-------------
+InsertionSort:    _ms |   _ms |   _ms |   _ms |   _ms - Avg:   0ms
+MergeSort: 	412ms | 392ms | 410ms | 411ms | 415ms - Avg: 408ms
+QuickSort:	113ms | 111ms | 114ms | 129ms | 113ms - Avg: 116ms
+
+100 000 000 elements
+--------------
+QuickSort: 9801ms
